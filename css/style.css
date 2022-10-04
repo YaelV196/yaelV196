@@ -1,0 +1,287 @@
+* {
+  padding:0px;
+  margin:0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to Ttop, rgb(117, 132, 132), white);
+  font-family: sans-serif;
+}
+
+/* ########### nav ############# */
+.nav{
+  position: fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  background-color: pink;
+  box-shadow: 0px 2px 5px 5px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  padding: 5px 0px;
+
+}
+.nav a{
+  text-decoration: none;
+  color:#555;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding: 10px 10px;
+  border-radius: 30px;
+  transition: all 0.2s linear;
+  margin-left: 10px;
+}
+.nav a:hover{
+  background-color: #fff;
+}
+.nav a.active{
+  background-color: #fff;
+  border:1px solid blue;
+}
+
+
+/* ######### card ###########  */
+.cardOuter{
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-content: center
+}
+.cardOuter .card {
+  width:600px;
+  background-color: pink;
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+.cardOuter .card:hover{
+  transform: scale(1.1);
+  background-color: #ccc;
+}
+.cardOuter .card.ani{
+  animation: hi 1s linear infinite;
+}
+@keyframes hi{
+  0%{
+    background-color: rgb(17, 7, 63);
+  }
+  20%{
+    background-color: blue;
+  }
+  30%{
+    background-color: rgb(170, 0, 255);
+  }
+  100%{
+    background-color: rgb(128, 0, 58);
+  }
+}
+.cardOuter .card .imgBox{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 50%;
+  margin: 20px 0px;
+}
+.cardOuter .card .imgBox img{
+  width:200px;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+  border-right: 3px solid rgb(255, 0, 191);
+  border-left: 3px solid rgb(32, 16, 16);
+  background-color: #000;
+}
+.cardOuter .card h1{
+  font-size: 30px;
+  text-align: center;
+}
+.cardOuter .card h2{
+  font-size: 17px;
+  text-align: center;
+  color:#999;
+  font-weight: normal;
+  letter-spacing: 5px;
+  margin-top: 10px;
+}
+.cardOuter .card .linkBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.cardOuter .card .linkBox a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardOuter .card .linkBox a:hover svg{
+  fill: rgb(61, 8, 43);
+}
+.cardOuter .card .linkBox a{
+  text-decoration: none;
+  margin-left: 30px;
+}
+.cardOuter .card .linkBox a svg{
+  width:50px;
+}
+.cardOuter .card .linkBox a.stack{
+  padding-bottom: 15px;
+}
+
+
+/* map */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width:800px;
+  margin: 0px auto;
+  border-radius: 20px;
+  /* The width is the width of the web page */
+}
+
+
+/* ############ aboutCard ################### */
+.aboutCard{
+  width:800px;
+  margin:50px auto;
+  background-color: pink;
+  border-radius: 20px;
+  padding: 50px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+.aboutCard .btnBox{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding:30px 0px;
+}
+.aboutCard .btnBox .btn{
+  border:none;
+  background-color: dodgerblue;
+  padding: 10px 20px;
+  color:#fff;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.aboutCard .btnBox .btn:hover{
+  background-color: blue;
+}
+.aboutCard h2{
+  margin-top: 10px;
+}
+.aboutCard h1{
+  /* text-align: center; */
+  margin: 10px 0px;
+}
+.aboutCard p{
+  /* text-align: center; */
+  /* font-size: 20px; */
+  font-weight: 500;
+}
+.contactCard{
+  width:700px;
+  margin:50px auto;
+  background-color: pink;
+  border-radius: 20px;
+  padding: 50px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.contactCard input,.contactCard select{
+width:100%;
+padding: 10px 15px;
+border-radius: 10px;
+border:1px solid #ccc;
+margin-top: 10px;
+}
+.contactCard label{
+  margin:20px 0px;
+}
+
+.contactCard textarea{
+width:100%;
+padding: 10px 15px;
+border-radius: 10px;
+border:1px solid #ccc;
+margin-top: 10px;
+
+}
+.contactCard .gender{
+
+}
+.contactCard .gender input{
+  width:20px;
+  height: 20px;
+margin-top: 10px;
+margin-right: 20px;
+margin-left: 20px;
+
+}
+.contactCard button{
+  background-color:dodgerblue;
+  color:#fff;
+  border-radius: 5px;
+  padding: 10px 30px;
+  border:none;
+  width:100%;
+  margin-top: 20px;
+}
+
+.contactCard h1{
+  text-align: center;
+  margin:20px 0px;
+}
+
+
+/* ######  footer ######### */
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  background-color: pink;
+}
+footer .linkBox {
+  margin: 20px 0px;
+}
+footer .linkBox a{
+text-decoration: none;
+color:#555;
+font-weight: bold;
+padding: 5px 20px;
+}
+
+footer p{
+  font-size: 20px;
+  color:#999;
+  font-weight: normal;
+  margin: 10px 0px;
+}
+footer p.p{
+  color:#000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

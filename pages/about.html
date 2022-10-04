@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ITC Precourse</title>
+
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        body {
+            font-family: "Sofia", sans-serif;
+            }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav">
+        <a class="home " href="../index.html">Home</a>
+        <a class="about active" href="#">About</a>
+        <a class="contact" href="./contact.html">Contact</a>
+    </div>
+
+    <div class="aboutCard">
+        <h1>About Me</h1>
+        <p>Hey! My name is Yaroslava Lytvynenko.I was born in the capital
+            of Ukraine, Kiev, and lived there my whole life, until 2014, when I moved to Israel and here I lived in two
+            cities Netanya and Efrat, whdere I am currently reside with my <family class="br"></family> My hobby is
+            traveling and my favoritde cities are Paris and London( because I love visiting museums and the Louvre and
+            the Tate Gallery are my favourite ones).Aside from that, I love learning about programming.It is great to see
+            text command materialize in the form of colors, style and etc...</p>
+
+            <h2>My visited Cities</h2>
+            <div class="btnBox">
+
+                <button class="back btn">Back</button>
+                <button class="next btn">Next</button>
+            </div>
+    </div>
+
+
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+
+    <footer>
+        <div class="linkBox">
+            <a class="home " href="../index.html">Home</a>
+            <a class="about active" href="#">About</a>
+            <a class="contact" href="./contact.html">Contact</a>
+        </div>
+        <p class="p">This page was built using: HTML, CSS and JavaScript</p>
+        <p>ITC - Israel Tech Challenge
+            www.itc.tech | Tel Aviv|ITC Campus|Shoken 18
+        </p>
+    </footer>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+        defer>
+        </script>
+
+    <script>
+
+        function initMap() {
+            
+            let arr = [
+                { lat: 51.5287352, lng: 0.3817825 },
+                { lat: 48.8589466, lng: 2.276995 },
+                { lat: 50.4905864, lng: 29.9248166 },
+            ]
+            let uluru = arr[0];
+            let map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 10,
+                center: uluru,
+            });
+
+            let btn = document.querySelectorAll('.btn');
+            let page = 0;
+            btn.forEach(item => {
+                item.addEventListener('click', () => {
+                    console.log('page 1:',page)
+
+                    if(page >= 2){
+                        page =0;
+                    }else{
+                        page++;
+                    }
+                    console.log('page 1:',page)
+
+                    console.log('Hello')
+                    uluru = arr[page];
+
+
+                    map = new google.maps.Map(document.getElementById("map"), {
+                        zoom: 10,
+                        center: uluru,
+                    });
+                    marker = new google.maps.Marker({
+                        position: uluru,
+                        map: map,
+                    });
+
+                })
+            })
+
+        }
+
+        window.initMap = initMap;
+    </script>
+
+
+</body>
+
+</html>

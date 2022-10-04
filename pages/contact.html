@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ITC Precourse</title>
+    <link href="../css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        body {
+            font-family: "Sofia", sans-serif;
+            }
+    </style>
+
+    <div class="nav">
+        <a class="home" href="../index.html">Home</a>
+        <a class="about" href="./about.html">About</a>
+        <a class="contact active" href="#">Contact</a>
+    </div>
+
+
+    <div class="contactCard">
+        <h1 class="name">Contact Me</h1>
+
+        <form action="https://formspree.io/f/mgeqynqe" method="POST">
+            
+            <label>
+                First Name:
+                <input type="text" required name="firstname">
+            </label>
+            <label>
+                Last Name:
+                <input type="text" name="lastname">
+            </label>
+            <label>
+                Your email:
+                <input type="email" required name="email">
+            </label>
+
+            <label>
+                Your message:
+                <textarea name="message" required></textarea>
+            </label>
+            <label class="gender">
+                <p>
+                    Gender:
+
+                </p>
+                <select name="gender">
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                </select>
+            </label>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="linkBox">
+            <a class="home" href="../index.html">Home</a>
+            <a class="about" href="./about.html">About</a>
+            <a class="contact active" href="#">Contact</a>
+        </div>
+        <p class="p">This page was built using: HTML, CSS and JavaScript</p>
+        <p>ITC - Israel Tech Challenge
+            www.itc.tech | ITC Campus | Shoken 18|972-03-7572075</p>
+    </footer>
+
+
+
+
+</body>
+
+</html>
